@@ -32,7 +32,7 @@ jobs:
         script: |
           cd /home/ubuntu/callapp/  # Replace with the correct path to the callapp directory on your server
           git pull origin main
-          sudo docker build -t my-react-app .
+          sudo docker build -t my-react-app . --progress=plain
           sudo docker stop my-react-app || true
           sudo docker rm my-react-app || true
           sudo docker run -d --name my-react-app -p 80:80 my-react-app
