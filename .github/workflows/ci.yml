@@ -28,7 +28,7 @@ jobs:
         host: ${{ secrets.HOST }} 
         username: ${{ secrets.USERNAME }} 
         key: ${{ secrets.SSH_PRIVATE_KEY }}
-        passphrase: ${{ secrets.SSH_PASSPHRASE }}
+#        passphrase: ${{ secrets.SSH_PASSPHRASE }}
         script: |
           cd ~/callapp  # Replace with the correct path to the callapp directory on your server
           git pull origin main
